@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="US-ASCII"?>
+<!DOCTYPE rfc SYSTEM "rfc2629.dtd" [
+
+<!ENTITY RFC5070 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.5070.xml">
+<!ENTITY RFC5901 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.5901.xml">
+<!ENTITY RFC5941 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.5941.xml">
+<!ENTITY RFC6545 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.6545.xml">
+<!ENTITY RFC6546 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.6546.xml">
+<!ENTITY RFC6545 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.6545.xml">
+]>
+<?xml-stylesheet type='text/xsl' href='rfc2629.xslt' ?>
+<!-- used by XSLT processors -->
+<!-- For a complete list and description of processing instructions (PIs), 
+    please see http://xml.resource.org/authoring/README.html. -->
+<!-- Below are generally applicable Processing Instructions (PIs) that most I-Ds might want to use.
+    (Here they are set differently than their defaults in xml2rfc v1.32) -->
+<?rfc strict="yes" ?>
+<?rfc toc="yes"?>
+<?rfc tocdepth="2"?>
+<?rfc symrefs="yes"?>
+<?rfc sortrefs="yes" ?>
+<?rfc compact="yes" ?>
+<?rfc subcompact="no" ?>
+<rfc category="info" docName="draft-ietf-mile-implementreport-01">
+
+ <front>
+
+   <title abbrev="Abbreviated Title">MILE Implementation Report</title>
+
+
+   <author fullname="Chris Inacio" initials="C." surname="Inacio">
+     <organization abbrev="CMU">Carnegie Mellon University</organization>
+     <address>
+       <postal>
+         <street>4500 5th Ave., SEI 4108</street>
+         <city>Pittsburgh</city>
+         <region>PA</region>
+         <code>15213</code>
+         <country>US</country>
+       </postal>
+       <email>inacio@andrew.cmu.edu</email>
+     </address>
+   </author>
+
+   <author fullname="Daisuke Miyamoto" initials="D." surname="Miyamoto">
+     <organization abbrev="UTokyo">The Univerisity of Tokyo</organization>
+     <address>
+       <postal>
+         <street>2-11-16 Yayoi, Bunkyo</street>
+         <city>Tokyo</city>
+         <region></region>
+         <code>113-8658</code>
+         <country>JP</country>
+       </postal>
+       <email>daisu-mi@nc.u-tokyo.ac.jp</email>
+     </address>
+   </author>
+
+   <date year="2014" />
+
+   <area>General</area>
+
+   <workgroup>MILE</workgroup>
+
+   <keyword>IODEF, RID, SCI, INCH, MILE, Implementation</keyword>
+
+   <abstract>
+     <t>This document is a collection of implementation reports from vendors, consortiums, and researchers who have implemented one or more of the standards published from the IETF INCident Handling (INCH) and Management Incident Lightweight Exchange (MILE) working groups.  </t>
+   </abstract>
+ </front>
+
+ <middle>
+   <section title="Introduction">
+     <t>This document is a collection of implementation reports from vendors and researchers who have 
+implemented one or more of the standards published from the INCH and MILE working groups.  The standards include: 
+<list style="symbols">
+   <t>Incident Object Description Exchange Format (IODEF) v1, RFC5070, </t>
+   <t>Incident Object Description Exchange Format (IODEF) v2, RFC5070-bis, </t>
+   <t>Extensions to the IODEF-Document Class for Reporting Phishing, RFC5901</t>
+   <t>Sharing Transaction Fraud Data, RFC5941</t>
+   <t>IODEF-extension for Structured Cybersecurity Information, RFCXXXX</t>
+   <t>Real-time Inter-network Defense (RID), RFC6545</t>
+   <t>Transport of Real-time Inter-network Defense (RID) Messages over HTTP/TLS, RFC6546.</t>
+</list></t>
+
+     <t>The implementation reports included in this document have been provided by the team or product responsible for the implementations of the mentioned RFCs.  
+        Additional submissions are welcome and should be sent to the draft editor.  
+        A more complete list of implementations, including open source efforts and vendor products, can also be found at the following location: 
+   <list>
+     <t>http://siis.realmv6.org/implementations/ </t>
+   </list> </t>
+
+
+   </section>
+
+   <section anchor="SharingGroups" title="Consortiums and Information Sharing and Analysis Centers (ISACs)">
+     <section title="Anti-Phishing Working Group">
+      <t>Description of how IODEF is used will be provided in a future revision.</t>
+     </section>
+     <section title="Advanced Cyber Defence Centre (ACDC)">
+    
+      <t>Description of how IODEF is used will be provided in a future revision.  http://www.botfree.eu/ </t>
+     
+     </section>
+   </section>
+
+   <section title="Open Source Implementations">
+     <section title="EMC/RSA RID Agent">
+      <t>The EMC/RSA RID agent is an open source implementation of the Internet Engineering Task Force (IETF) standards for the exchange of incident and indicator data. The code has been released under an MIT license and development will continue with the open source community at the Github site for RSA Intelligence Sharing:
+<list>
+     <t>https://github.com/RSAIntelShare/RID-Server.git</t>
+</list> </t>
+
+<t>The code implements the RFC6545, Real-time Inter-network Defense (RID) and RFC6546, Transport of RID over HTTP/TLS protocol. The code supports the evolving RFC5070-bis Incident Object Description Exchange Format (IODEF) data model from the work in the IETF working group Managed Incident Lightweight Exchange (MILE).</t>
+     </section>
+
+     <section title="NICT IODEF-SCI implementation">
+     <t>Japan's National Institute of Information and Communications Technology (NICT)
+ Network Security Research Institute implemented open source tools for exchanging,
+ accumulating, and locating IODEF-SCI documents.</t>
+
+     <t>Three tools are available in GitHub. They assist the exchange of IODEF-SCI
+documents between parties. IODEF-SCI is the IETF draft that extends IODEF so
+that IODEF document can embed structured cybersecurity information (SCI).
+For instance, it can embed MMDEF, CEE, MAEC in XML and CVE identifiers.</t>
+
+<t>The three tools are generator, exchanger, and parser. The generator
+generates IODEF-SCI document or appends an XML to existing IODEF document.
+The exchanger sends the IODEF document to its correspondent node. The parser
+receives, parses, and stores the IODEF-SCI document. It also equips the
+interface that enable users to locate IODEF-SCI documents it has ever
+received. The code has been released under an MIT license and development
+will continue here.</t>
+
+<t>Note that users can enjoy this software with their own responsibility.</t>
+
+<t>Available Online:
+<list>
+     <t>https://github.com/TakeshiTakahashi/IODEF-SCI</t>
+</list> </t>
+     </section>
+    </section>
+
+   <section title="Proprietary Implementations">
+   <section title="Deep Secure">
+<t>Deep-Secure Guards are built to protect a trusted domain from: 
+  <list style="symbols">
+     <t>releasing sensitive data that does not meet the organisational security policy</t>
+     <t>applications receiving badly constructed or malicious data which could exploit a vulnerability (known or unknown)</t>
+  </list></t>
+<t>Deep-Secure Guards support HTTPS and XMPP (optimised server to server protocol) transports.  
+  The Deep-Secure Guards support transfer of XML based business content by creating a schema to
+  translate the known good content to and from the intermediate format. This means that the Deep-Secure
+  Guards can be used to protect: 
+  <list style="symbols">
+    <t>IODEF/RID using the HTTPS transport binding (RFC 6546)</t>
+    <t>IODEF/RID using an XMPP binding</t>
+    <t>ROLIE using HTTPS transport binding (draft-field-mile-rolie-02)</t>
+    <t>STIX/TAXII using the HTTPS transport binding</t>
+  </list> </t>
+ 
+<t>Deep-Secure Guards also support the SMTP transport and perform deep content inspection of content including XML attachments.
+ The Mail Guard supports S/MIME and Deep Secure are working on support for the upcoming PLASMA standard which enables information
+ centric policy enforcement of data.</t>
+</section>
+
+<section title="IncMan Suite, DFLabs">
+<t>The Incident Object Description Exchange Format, documented in the RFC 5070, defines a data representation that provides a framework
+ for sharing information commonly exchanged by Computer Security Incident Response Teams (CSIRTs) about computer security incidents.IncMan Suite implements the IODEF standard for exchanging details about incidents, either for exporting and importing activities.
+ This has been introduced to enhance the capabilities of the various CSIRT, to facilitate collaboration and sharing of useful experiences,
+ conveying awareness on specific cases.</t>
+<t>The IODEF implementation is specified as an XML schema, therefore all data are stored in an xml file: in this file all data of
+ an incident are organized in a hierarchical structure to describe the various objects and their relationships.</t>
+<t>IncMan Suite relies on IODEF as a transport format, composed by various classes for describing the entities which are part
+ of the incident description: for instance the various relevant timestamps (detect time , start time, end time, report time),
+ the techniques used by the intruders to perpetrate the incident, the impact of the incident, either technical and non-technical
+ (time and monetary) and obviously all systems involved in the incident.</t>
+<section title="Exporting Incidents">
+<t>Each incident defined in IncMan Suite can be exported via a User Interface feature and it will populate an xml document. 
+Due to the nature of the data processed, the IODEF extraction might be considered privacy sensitive by the parties exchanging
+ the information or by those described by it. For this reason, specific care needs to be taken in ensuring the distribution to
+ an appropriate audience or third party, either during the document exchange and subsequent processing.</t>
+<t>The xml document generated will include description and details of the incident along
+ with all the systems involved and the related information. At this stage it can be distributed for import into a remote system.</t>
+</section>
+<section title="Importing Incidents">
+<t>IncMan Suite provides a functionality to import incidents stored in files and transported via IODEF-compliant
+ xml documents. The importing process comprises of two steps: firstly, the file is inspected to validate if well
+ formed, then all data are uploaded inside the system.</t><t>If an incident is already existing in the system with the same incident id, the new one being imported will
+ be created under a new id. This approach prevents from accidentally overwriting existing info or merging inconsistent data.</t>
+<t>IncMan Suite includes also a feature to upload incidents from emails.</t>
+<t>The incident, described in xml format, can be stored directly into the body of the email
+ message or transported as an attachment of the email. At regular intervals, customizable by the user, 
+IncMan Suite monitors for incoming emails, filtered by a configurable white-list and black-list mechanism
+ on the sender's email account, then a parser processes the received email and a new incident is created
+ automatically, after having validated the email body or the attachment to ensure it is a well formed format.</t>
+</section>
+
+
+</section>
+
+     <section title="Surevine Proof of Concept">
+<t>XMPP is enhanced and extended through the XMPP Extension Protocols (or XEPs).
+  XEP-0268 (http://xmpp.org/extensions/xep-0268.html) describes incident management (using IODEF) of the XMPP network itself, 
+effectively supporting self-healing the XMPP network.  In order to more generically cover incident management of a network and
+ over a network, XEP-0268 requires some updates.  We are working on these changes together with a new XEP that supports
+ "social networking" over XMPP, enhancing the publish-and-subscribe XEP (XEP-0060).  This now allows nodes to publish any type
+ of content and subscribe to and therefore receive the content.  XEP-0268 will be used to describe IODEF content.  We now have
+ an alpha version of the server-side software and client-side software required to demonstrate the "social networking" capability
+ and are currently enhancing this to support Cyber Incident management in real-time.</t>
+
+    </section>
+
+	<section title="MANTIS Cyber-Intelligence Management Framework">
+<t>
+MANTIS provides an example implementation of a framework for managing cyber threat intelligence expressed in standards such as STIX, CybOX, IODEF, etc. The aims of providing such an example implementation are:
+</t>
+<t>
+	<list style="symbols">
+		<t>To aide discussions about emerging standards such as STIX, CybOX et al. with respect to questions regarding tooling: how would a certain aspect be implemented, how do changes affect an implementation? Such discussions become much easier and have a better basis if they can be lead in the context of example tooling that is known to the community.</t>
+		<t>To lower the entrance barrier for organizations and teams (esp. CERT teams) in using emerging standards for cyber-threat intelligence management and exchange.</t>
+		<t>To provide a platform on the basis of which research and community-driven development in the area of cyber-threat intelligence management can occur.</t>
+	</list>
+</t>
+   </section>
+
+ <section title="Collaborative Incident Management System">
+<t>
+Collaborative Incident Management System (CIMS) is a proof-of-concept system for collaborative incident handling and for the sharing of cyber defence situational awareness information between the participants, developed for the Cyber Coalition 2013 (CC13) exercise organized by NATO. CIMS was implemented based on Request Tracker (RT), an open source software widely used for handling incident response by many CERTs and CSIRTs.
+</t>
+<t>
+One of the functionality implemented in CIMS was the ability to import and export IODEF messages in the body of emails. The intent was to verify the suitability of IODEF to achieve the objective of collaborative incident handling. The customized version of RT could be configured to send an email message containing an IODEF message whenever an incident ticket was created, modified or deleted. These IODEF messages would then be imported into other incident handling systems in order to allow participating CSIRTs to use their usual means for incident handling, while still interacting with those using the proof-of-concept CIMS. Having an IODEF message generated for every change made to the incident information in RT (and for the system to allow incoming IODEF email messages to be associated to an existing incident) would in some way allow all participating CSIRTs to actually work on a "common incident ticket", at least at the conceptual level. Of particular importance was the ability for users to exchange information between each other concerning actions taken in the handling of a particular incident, thus creating a sort of common action log, as well as requesting/tasking others to provide information or perform specified action and correlating received responses to the original request or tasking. As well, a specific "profile" was developed to identify a subset of the IODEF classes that would be used during the exercise, in an attempt to channel all users into a common usage pattern of the otherwise flexible IODEF standard.
+</t>
+  </section>
+
+ <section title="n6">
+<t>
+n6 is a platform for processing security-related information, developed by NASK, CERT Polska.
+Its API provides a common and unified way of representing data across the different sources that participate in knowledge management.
+</t>
+<t>
+n6 exposes a REST-ful API over HTTPS with mandatory authentication via TLS client certificates, to ensure confidential and trustworthy communications. Moreover, it uses an event-based data model for representation of all types of security information.
+</t>
+<t>
+Each event is represented as a JSON object with a set of mandatory and optional attributes. It also supports alternative output data formats for keeping compatibility with existing systems - IODEF and CSV - although they lack some of the attributes that may be present in the native JSON format.
+</t>
+ </section>
+
+</section>
+
+<section title="Proprietaries with Planned Support">
+   <section title="Threat Central, HP">
+   <t>HP has developed HP Threat Central, a security intelligence platform that enables automated, real-time collaboration between
+ organizations to combat today's increasingly sophisticated cyber attacks. One way automated sharing of threat indicators is achieved
+ is through close integration with the HP ArcSight SIEM for automated upload and consumption of information from the Threat Central Server.
+ In addition HP Threat Central supports open standards for sharing threat information so that participants who do not use HP Security Products
+ can participate in the sharing ecosystem.  General availability of Threat Central will be in 2014. It is planned that future versions also
+ support IODEF for the automated upload and download of threat information.</t>
+   </section>
+</section>
+
+<section title="Implementation Guide">
+	<t>
+	The section aims at sharing the tips for development of IODEF-capable systems. 
+	</t>
+	<section title="Code Generators">
+	<t>
+		For implementing IODEF-capable systems, it is feasible to employ code generators for XML Schema Document (XSD). The generators are used to save development costs since they automatically create useful libraries for accessing XML attributes, composing messages, and/or validating XML objects. The IODEF XSD was defined in section 8 of RFC 5070, and is availabe at http://www.iana.org/assignments/xml-registry/schema/iodef-1.0.xsd.
+	</t>
+	<t>
+		However, there still remains some problem. Due to the complexity of IODEF XSD, some code generators could not generate from the XSD file. The tested code generators were as follows.
+	</t>
+	<t>
+		<list style="symbols">
+			<t><xref target="XSD:Perl">XML::Pastor</xref> (Perl)</t>
+			<t><xref target="XSD:Ruby">RXSD</xref> (Ruby) </t>
+			<t><xref target="XSD:Python">PyXB</xref> (Python) </t>
+			<t><xref target="XSD:Java">JAXB</xref> (Java) </t>
+			<t><xref target="XSD:Cxx">CodeSynthesis XSD</xref> (C++) </t>
+			<t><xref target="XSD:CS">Xsd.exe</xref> (C#) </t>
+		</list>
+	</t>
+	<t>
+		For instance, we have used XML::Pastor, but it could not properly understand its schema due to the complexity of IODEF XSD. The same applies to RXSD and JAXB. Only PyXB, CodeSynthesis XSD and Xsd.exe were able to understand the schema.
+	</t>
+	<t>
+			There is no recommended workaround, however, a double conversion of XSD file is one option to go through the situation; it means XSD is serialized to XML, and it is again converted to XSD. The resultant XSD was process-able by the all tools above.
+	</t>
+	<t>
+			It should be noted that IODEF uses '-' (hyphen) symbols in its classes or attributes, listed as follows.
+	</t>
+	<t>
+		<list style="symbols">
+			<t>
+				IODEF-Document Class; it is the top level class in the IODEF data model
+				described in section 3.1 of <xref target="RFC5070"/>.
+			</t>
+			<t>
+				The vlan-name and vlan-num Attribute; according to section 3.16.2 of
+				<xref target="RFC5070"/>, they are the name and number of Virtual LAN and are the
+				attributes for Address class.
+			</t>
+			<t>
+				Extending the Enumerated Values of Attribute; according to section 5.1
+				of <xref target="RFC5070"/>, it is a extension techniques to add new enumerated values
+				to an attribute, and has a prefix of "ext-", e.g., ext-value, ext-category,
+				ext-type, and so on.
+			</t>
+		</list>
+	</t>
+	<t>
+		According to the language specification, many programing language prohibit to contain
+		'-' symbols in the name of class. The code generators must replace or remove '-'
+		when building the librarlies. They should have the name space to restore '-' 
+		when outputting the XML along with IODEF XSD.
+	</t>
+	</section>
+	<section title="Usability">
+			<t>
+				Here notes some tips to avoid problems. 
+			</t>
+			<t>
+				<list style="symbols">
+					<t>
+					IODEF has category attribute for NodeRole class. Though various categories
+					are described, they are not enough. For example, in the case of web mail servers,
+					you should choose either "www" or "mail". One suggestion is selecting "mail"
+					as the category attribute and adding "www" for another attirbute.
+					</t>
+					<t>
+					The numbering of Incident ID needs to be considered. Otherwise, information,
+					such as the number of incidents within certain period could be observed by
+					document receivers. For instance, we could randomize the assignment of the numbers.
+					</t>
+				</list>
+			</t>
+	</section>
+</section>
+
+   <section anchor="Acknowledgements" title="Acknowledgements">
+     <t>The MILE Implementation report has been compiled through the submissions of implementers of INCH and MILE working group standards.
+  A special note of thanks to the following contributors:
+<list>
+<t>John Atherton, Surevine</t>
+<t>Humphrey Browning, Deep-Secure</t>
+<t>Dario Forte, DFLabs</t>
+<t>Tomas Sander, HP</t>
+<t>Ulrich Seldeslachts, ACDC</t>
+<t>Takeshi Takahashi, National Institute of Information and Communications Technology
+Network Security Research Institute</t>
+<t>Kathleen Moriarty, EMC</t>
+<t>Bernd Grobauer, Siemens</t>
+
+</list> </t>
+
+   </section>
+
+   <section anchor="IANA" title="IANA Considerations">
+     <t>This memo includes no request to IANA.</t>
+   </section>
+
+   <section anchor="Security" title="Security Considerations">
+     <t>This draft provides a summary of implementation reports from researchers and vendors who have implemented RFCs and drafts from the MILE and INCH working groups.  There are no security considerations added in this draft because of the nature of the document.</t>
+   </section>
+ </middle>
+
+ <!--  *****BACK MATTER ***** -->
+
+ <back>
+
+<!-- No Normative References yet
+   <references title="Normative References">
+
+   </references>
+-->
+
+   <references title="Informative References">
+
+     &RFC5070;
+
+     &RFC5901;
+
+     &RFC5941;
+
+     &RFC6545;
+
+     &RFC6546;
+			<reference anchor="XSD:Perl" target="http://search.cpan.org/~aulusoy/XML-Pastor-1.0.4/">
+				<front>
+					<title>XML::Pastor</title>
+					<author initials="A." surname="Ulsoy" fullname="Ayhan Ulusoy" />
+					<date year="" />
+				</front>
+			</reference>
+			<reference anchor="XSD:Ruby" target="https://github.com/movitto/RXSD">
+				<front>
+					<title>RXSD - XSD / Ruby Translator</title>
+					<author initials="M." surname="Morsi" fullname="Mohammed Morsi" />
+					<date year="" />
+				</front>
+			</reference>
+			<reference anchor="XSD:Python" target="https://pypi.python.org/pypi/PyXB">
+				<front>
+					<title>PyXB: Python XML Schema Bindings</title>
+					<author initials="P." surname="Bigot" fullname="Peter A. Bigot" />
+					<date year="" />
+				</front>
+			</reference>
+			<reference anchor="XSD:Java" target="https://jaxb.java.net/">
+				<front>
+					<title>JAXB Reference Implementation</title>
+					<author>
+						<organization>Project Kenai</organization>
+					</author>
+					<date year="" />
+				</front>
+			</reference>
+			<reference anchor="XSD:Cxx" target="http://www.codesynthesis.com/">
+				<front>
+					<title>XSD - XML Data Binding for C++</title>
+					<author>
+						<organization>CodeSynthesis</organization>
+					</author>
+					<date year="" />
+				</front>
+			</reference>
+			<reference anchor="XSD:CS" target="http://www.codesynthesis.com/">
+				<front>
+					<title>XML Schema Definition Tool (Xsd.exe)</title>
+					<author>
+						<organization>Microsoft</organization>
+					</author>
+					<date year="" />
+				</front>
+			</reference>
+
+   </references>
+
+
+ </back>
+</rfc>
