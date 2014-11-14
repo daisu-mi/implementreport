@@ -65,7 +65,9 @@
    <keyword>IODEF, RID, SCI, INCH, MILE, Implementation</keyword>
 
    <abstract>
-     <t>This document is a collection of implementation reports from vendors, consortiums, and researchers who have implemented one or more of the standards published from the IETF INCident Handling (INCH) and Management Incident Lightweight Exchange (MILE) working groups.  </t>
+     <t>This document is a collection of implementation reports from vendors, consortiums, and researchers who have 
+implemented one or more of the standards published from the IETF INCident Handling (INCH) and Management Incident
+ Lightweight Exchange (MILE) working groups.  </t>
    </abstract>
  </front>
 
@@ -141,7 +143,7 @@ will continue here.</t>
      </section>
     </section>
 
-   <section title="Proprietary Implementations">
+   <section title="Vendor Implementations">
    <section title="Deep Secure">
 <t>Deep-Secure Guards are built to protect a trusted domain from: 
   <list style="symbols">
@@ -224,31 +226,9 @@ MANTIS provides an example implementation of a framework for managing cyber thre
 </t>
    </section>
 
- <section title="Collaborative Incident Management System">
-<t>
-Collaborative Incident Management System (CIMS) is a proof-of-concept system for collaborative incident handling and for the sharing of cyber defence situational awareness information between the participants, developed for the Cyber Coalition 2013 (CC13) exercise organized by NATO. CIMS was implemented based on Request Tracker (RT), an open source software widely used for handling incident response by many CERTs and CSIRTs.
-</t>
-<t>
-One of the functionality implemented in CIMS was the ability to import and export IODEF messages in the body of emails. The intent was to verify the suitability of IODEF to achieve the objective of collaborative incident handling. The customized version of RT could be configured to send an email message containing an IODEF message whenever an incident ticket was created, modified or deleted. These IODEF messages would then be imported into other incident handling systems in order to allow participating CSIRTs to use their usual means for incident handling, while still interacting with those using the proof-of-concept CIMS. Having an IODEF message generated for every change made to the incident information in RT (and for the system to allow incoming IODEF email messages to be associated to an existing incident) would in some way allow all participating CSIRTs to actually work on a "common incident ticket", at least at the conceptual level. Of particular importance was the ability for users to exchange information between each other concerning actions taken in the handling of a particular incident, thus creating a sort of common action log, as well as requesting/tasking others to provide information or perform specified action and correlating received responses to the original request or tasking. As well, a specific "profile" was developed to identify a subset of the IODEF classes that would be used during the exercise, in an attempt to channel all users into a common usage pattern of the otherwise flexible IODEF standard.
-</t>
-  </section>
-
- <section title="n6">
-<t>
-n6 is a platform for processing security-related information, developed by NASK, CERT Polska.
-Its API provides a common and unified way of representing data across the different sources that participate in knowledge management.
-</t>
-<t>
-n6 exposes a REST-ful API over HTTPS with mandatory authentication via TLS client certificates, to ensure confidential and trustworthy communications. Moreover, it uses an event-based data model for representation of all types of security information.
-</t>
-<t>
-Each event is represented as a JSON object with a set of mandatory and optional attributes. It also supports alternative output data formats for keeping compatibility with existing systems - IODEF and CSV - although they lack some of the attributes that may be present in the native JSON format.
-</t>
- </section>
-
 </section>
 
-<section title="Proprietaries with Planned Support">
+<section title="Vendors with Planned Support">
    <section title="Threat Central, HP">
    <t>HP has developed HP Threat Central, a security intelligence platform that enables automated, real-time collaboration between
  organizations to combat today's increasingly sophisticated cyber attacks. One way automated sharing of threat indicators is achieved
@@ -257,6 +237,34 @@ Each event is represented as a JSON object with a set of mandatory and optional 
  can participate in the sharing ecosystem.  General availability of Threat Central will be in 2014. It is planned that future versions also
  support IODEF for the automated upload and download of threat information.</t>
    </section>
+</section>
+
+<section title="Other Implementations">
+	<section title="Collaborative Incident Management System">
+		<t>
+		Collaborative Incident Management System (CIMS) is a proof-of-concept system
+		for collaborative incident handling and for the sharing of cyber defence situational
+		awareness information between the participants, developed for the Cyber Coalition 2013
+		(CC13) exercise organized by NATO. CIMS was implemented based on Request Tracker (RT),
+		an open source software widely used for handling incident response by many CERTs and CSIRTs.
+		</t>
+	<t>
+	One of the functionality implemented in CIMS was the ability to import and export IODEF messages in the body of emails. The intent was to verify the suitability of IODEF to achieve the objective of collaborative incident handling. The customized version of RT could be configured to send an email message containing an IODEF message whenever an incident ticket was created, modified or deleted. These IODEF messages would then be imported into other incident handling systems in order to allow participating CSIRTs to use their usual means for incident handling, while still interacting with those using the proof-of-concept CIMS. Having an IODEF message generated for every change made to the incident information in RT (and for the system to allow incoming IODEF email messages to be associated to an existing incident) would in some way allow all participating CSIRTs to actually work on a "common incident ticket", at least at the conceptual level. Of particular importance was the ability for users to exchange information between each other concerning actions taken in the handling of a particular incident, thus creating a sort of common action log, as well as requesting/tasking others to provide information or perform specified action and correlating received responses to the original request or tasking. As well, a specific "profile" was developed to identify a subset of the IODEF classes that would be used during the exercise, in an attempt to channel all users into a common usage pattern of the otherwise flexible IODEF standard.
+	</t>
+	</section>
+
+	<section title="n6">
+	<t>
+	n6 is a platform for processing security-related information, developed by NASK, CERT Polska. Its API provides a common and unified way of representing data across the different sources that participate in knowledge management.
+	</t>
+	<t>
+	n6 exposes a REST-ful API over HTTPS with mandatory authentication via TLS client certificates, to ensure confidential and trustworthy communications. Moreover, it uses an event-based data model for representation of all types of security information.
+	</t>
+	<t>
+	Each event is represented as a JSON object with a set of mandatory and optional attributes. It also supports alternative output data formats for keeping compatibility with existing systems - IODEF and CSV - although they lack some of the attributes that may be present in the native JSON format.
+	</t>
+</section>
+
 </section>
 
 <section title="Implementation Guide">
@@ -350,6 +358,8 @@ Each event is represented as a JSON object with a set of mandatory and optional 
 Network Security Research Institute</t>
 <t>Kathleen Moriarty, EMC</t>
 <t>Bernd Grobauer, Siemens</t>
+<t>Dandurand Luc, NATO</t>
+<t>Pawel Pawlinski, NASK</t>
 
 </list> </t>
 
