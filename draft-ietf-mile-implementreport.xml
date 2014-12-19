@@ -83,6 +83,7 @@ implemented one or more of the standards published from the INCH and MILE workin
    <t>IODEF-extension for Structured Cybersecurity Information, RFCXXXX</t>
    <t>Real-time Inter-network Defense (RID), RFC6545</t>
    <t>Transport of Real-time Inter-network Defense (RID) Messages over HTTP/TLS, RFC6546.</t>
+   <t>Incident Object Description Exchange Format (IODEF) Extension for Structured Cybersecurity Information, RFC7203</t>
 </list></t>
 
      <t>The implementation reports included in this document have been provided by the team or product responsible for the implementations of the mentioned RFCs.  
@@ -141,7 +142,7 @@ will continue here.</t>
      <t>https://github.com/TakeshiTakahashi/IODEF-SCI</t>
 </list> </t>
      </section>
-    </section>
+     </section>
 
    <section title="Vendor Implementations">
    <section title="Deep Secure">
@@ -273,10 +274,10 @@ MANTIS provides an example implementation of a framework for managing cyber thre
 	</t>
 	<section title="Code Generators">
 	<t>
-		For implementing IODEF-capable systems, it is feasible to employ code generators for XML Schema Document (XSD). The generators are used to save development costs since they automatically create useful libraries for accessing XML attributes, composing messages, and/or validating XML objects. The IODEF XSD was defined in section 8 of RFC 5070, and is availabe at http://www.iana.org/assignments/xml-registry/schema/iodef-1.0.xsd.
+		For implementing IODEF-capable systems, it is feasible to employ code generators for XML Schema Document (XSD). The generators are used to save development costs since they automatically create useful libraries for accessing XML attributes, composing messages, and/or validating XML objects. The XSD of IODEFv1 was defined in section 8 of RFC 5070, and is availabe at http://www.iana.org/assignments/xml-registry/schema/iodef-1.0.xsd.
 	</t>
 	<t>
-		However, there still remains some problem. Due to the complexity of IODEF XSD, some code generators could not generate from the XSD file. The tested code generators were as follows.
+		However, there still remained some problems. Due to the complexity of IODEF XSD, some code generators could not generate from the XSD file. The tested code generators were as follows.
 	</t>
 	<t>
 		<list style="symbols">
@@ -323,6 +324,17 @@ MANTIS provides an example implementation of a framework for managing cyber thre
 		when outputting the XML along with IODEF XSD.
 	</t>
 	</section>
+
+	<section title="iodeflib">
+	<t>iodeflib is an open source implementation written in Python. This provides a simple but powerful APIs to create, parse and edit IODEF documents. It was designed in order to keep its interface as simple as possible, whereas generated libraries tend to inherit the complexity of IODEF XSD. As well as the interface, iodeflib involves functions of hiding some unnecessarily nested structures of the IODEF schema, and adding more convenient shortcuts.</t>
+	<t>This tool is available through the following link:</t>
+	<t>
+		<list>
+			<t>http://www.decalage.info/python/iodeflib</t>
+		</list>
+	</t>
+	</section>
+
 	<section title="Usability">
 			<t>
 				Here notes some tips to avoid problems. 
