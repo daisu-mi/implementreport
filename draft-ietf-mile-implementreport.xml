@@ -56,7 +56,7 @@
      </address>
    </author>
 
-   <date year="2014" />
+   <date year="2015" />
 
    <area>General</area>
 
@@ -345,8 +345,7 @@ MANTIS provides an example implementation of a framework for managing cyber thre
 	</section>
 
 	<section title="ipdefpm">
-	<t>IODEF.pm is an open source implementation written in Perl. This also provides a simple interface for creating and parsing IODEF documents, in order to facilitate the translation of the a key-value based format to the IODEF representation. The module contains a generic XML DTD parser and includes a simplified node based representation of the IODEF DTD. It can hence easily be upgraded or extended to support new XML nodes or other DTDs.
-
+	<t>IODEF.pm is an open source implementation written in Perl. This also provides a simple interface for creating and parsing IODEF documents, in order to facilitate the translation of the a key-value based format to the IODEF representation. The module contains a generic XML DTD parser and includes a simplified node based representation of the IODEF DTD. It can hence easily be upgraded or extended to support new XML nodes or other DTDs.</t>
 	<t>This tool is available through the following link:</t>
 	<t>
 		<list>
