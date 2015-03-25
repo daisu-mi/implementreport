@@ -56,7 +56,8 @@
      </address>
    </author>
 
-   <date year="2014" />
+   <!-- <date year="2014" /> -->
+   <date year="2015"/>
 
    <area>General</area>
 
@@ -263,6 +264,18 @@ MANTIS provides an example implementation of a framework for managing cyber thre
 	<t>
 	Each event is represented as a JSON object with a set of mandatory and optional attributes. It also supports alternative output data formats for keeping compatibility with existing systems - IODEF and CSV - although they lack some of the attributes that may be present in the native JSON format.
 	</t>
+</section>
+<section title="Automated Incident Reporting - AirCERT">
+	<t>AirCERT was implemented by CERT/CC of Carnegie Mellon's Software Engineering Institute CERT divison.  AirCERT was designed to be an Internet-scalable distributed system for sharing security event data.  The AirCERT system was designed to be an automated collector of flow and IDS alerts.  AirCERT would collect that information into a relational database and be able to share reporting using IODEF and IDMEF.  AirCERT additionally used SNML to exchange information about the network.  AirCERT was implemented in a combination of C and perl modules and included periodic graphing capabilities leveraging RRDTool.</t>
+	<t>AirCERT was intended for large scale distributed deployment and eventually the ability to sanitize data to be shared across administrative domains.  The architecture was desgined to allow collection of data at a per site basis and to allow each site to create data sharing based on its own particular trust relationships.</t>
+</section>
+<section title="US Department of Energy CyberFed">
+	<t>The CyberFed system was implemented and deployed by Argonne National Laboratory to automate the detection and response of attack activity against Department of Energy (DoE) computer networks.  CyberFed automates the collection of network alerting activity from various perimeter network defenses and logs those events into its database.  CyberFed then automatically converts that information into blocking information transmitted to all participants.  The original implementation used IODef messages wrapped in an XML extension to manage a large array of indicators.  The CyberFed system was not designed to describe a particular incident as much as to describe a set of current network blocking indicators that can be generated and deployed machine-to-machine. </t>
+	<t>CyberFed is primarily implemented in Perl.  Included as part of the CyberFed system are scripts which interact with a large number of firewalls, IDS/IPS devices, DNS systems, and proxies which operate to implement both the automated collection of events as well as the automated deployment of blacking. </t>
+	<t>Currently CyberFed supports multiple exchange formats including IODef and STIX.  OpenIOC is also a potential exchange format that DoE is considering.</t>
+</section>
+<section title="TrendMicro Sharing System">
+	<t>More information to come.</t>
 </section>
 
 </section>
