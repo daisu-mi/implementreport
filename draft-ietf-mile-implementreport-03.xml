@@ -477,7 +477,7 @@ Network Security Research Institute</t>
 					<date year="" />
 				</front>
 			</reference>
-			<reference anchor="XSD:CS" target="http://www.codesynthesis.com/">
+			<reference anchor="XSD:CS" target="http://www.microsoft.com/">
 				<front>
 					<title>XML Schema Definition Tool (Xsd.exe)</title>
 					<author>
