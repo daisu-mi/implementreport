@@ -21,7 +21,7 @@
 <?rfc sortrefs="yes" ?>
 <?rfc compact="yes" ?>
 <?rfc subcompact="no" ?>
-<rfc category="info" docName="draft-ietf-mile-implementreport-03">
+<rfc category="info" docName="draft-ietf-mile-implementreport-04">
 
  <front>
 
@@ -99,12 +99,19 @@ implemented one or more of the standards published from the INCH and MILE workin
 
    <section anchor="SharingGroups" title="Consortiums and Information Sharing and Analysis Centers (ISACs)">
      <section title="Anti-Phishing Working Group">
-      <t>Description of how IODEF is used will be provided in a future revision.</t>
+      <t>Anti-Phishing Working Group (APWG) is one of the biggest coalition against cybercrime, especially phishing. In order to collect threat information in a structured format, APWG provides a phishing and cybercrime reporting tool which sends threat information to APWG by tailoring information with IODEF format, based on RFC5700 and RFC5901.</t>
      </section>
+
      <section title="Advanced Cyber Defence Centre (ACDC)">
-    
-      <t>Description of how IODEF is used will be provided in a future revision.  http://www.botfree.eu/ </t>
-     
+      <t>The Advanced Cyber Defense Centre (ACDC), is EU-wide activity to fight against botnets. ACDC provides a solutions to mitigate on-going attacks, as well as consolidating information provided by various stakeholders into a pool of knowledge. Within ACDC, IODEF is one of the supported schema for exchanging the information.</t>
+     </section>
+
+     <section title="Research and Education Networkig Information Sharing and Analyssi Center (REN-ISAC)">
+      <t>Research and Education Networking Information Sharing and Analysis Center (REN-ISAC) is a private community of the research and higher education members fro sharing threat information, and employs IODEF formatted-message to exchange information.</t>
+      <t>REN-ISAC also recommends to ues of the IODEF attachment provided with the notification email be processed rather than relying on parsing of the email body text. The interface provided by REN-ISAC are designed for dealing with such email.
+   <list>
+     <t>http://www.ren-isac.net/notifications/using_iodef.html </t>
+   </list> </t>
      </section>
    </section>
 
