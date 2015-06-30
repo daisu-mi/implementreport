@@ -99,7 +99,7 @@ implemented one or more of the standards published from the INCH and MILE workin
 
    <section anchor="SharingGroups" title="Consortiums and Information Sharing and Analysis Centers (ISACs)">
      <section title="Anti-Phishing Working Group">
-      <t>Anti-Phishing Working Group (APWG) is one of the biggest coalition against cybercrime, especially phishing. In order to collect threat information in a structured format, APWG provides a phishing and cybercrime reporting tool which sends threat information to APWG by tailoring information with IODEF format, based on RFC5700 and RFC5901.</t>
+      <t>Anti-Phishing Working Group (APWG) is one of the biggest coalition against cybercrime, especially phishing. In order to collect threat information in a structured format, APWG provides a phishing and cybercrime reporting tool which sends threat information to APWG by tailoring information with IODEF format, based on RFC5070 and RFC5901.</t>
      </section>
 
      <section title="Advanced Cyber Defence Centre (ACDC)">
