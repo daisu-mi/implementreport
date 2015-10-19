@@ -266,6 +266,21 @@ MANTIS provides an example implementation of a framework for managing cyber thre
  can participate in the sharing ecosystem.  General availability of Threat Central will be in 2014. It is planned that future versions also
  support IODEF for the automated upload and download of threat information.</t>
    </section>
+
+   <section title="DAEDALUS, NICT">
+	<t>DAEDALUS is a real-time alert system based on a large-scale
+darknet monitoring facility that has been deployed as a part of the
+nicter system of NICT, Japan. DAEDALUS consists of an analysis center (i.e., nicter) and
+several cooperate organizations. Each organization installs a darknet sensor
+and establishes a secure channel between it and the analysis center,
+and continuously forwards darknet traffic toward the center. In
+addition, each organization registers the IP address range of its
+livenet at the center in advance. When these distributed darknet sensors observe 
+malware activities from the IP address of a cooperate organization, then 
+the analysis center sends an alert to the organization.
+The future version of DAEDALUS will support IODEF for sending alert messages to the users.
+	</t>
+	</section>
 </section>
 
 <section title="Other Implementations">
@@ -290,9 +305,6 @@ MANTIS provides an example implementation of a framework for managing cyber thre
 	<t>The CyberFed system was implemented and deployed by Argonne National Laboratory to automate the detection and response of attack activity against Department of Energy (DoE) computer networks.  CyberFed automates the collection of network alerting activity from various perimeter network defenses and logs those events into its database.  CyberFed then automatically converts that information into blocking information transmitted to all participants.  The original implementation used IODEf messages wrapped in an XML extension to manage a large array of indicators.  The CyberFed system was not designed to describe a particular incident as much as to describe a set of current network blocking indicators that can be generated and deployed machine-to-machine. </t>
 	<t>CyberFed is primarily implemented in Perl.  Included as part of the CyberFed system are scripts which interact with a large number of firewalls, IDS/IPS devices, DNS systems, and proxies which operate to implement both the automated collection of events as well as the automated deployment of blacking. </t>
 	<t>Currently CyberFed supports multiple exchange formats including IODef and STIX.  OpenIOC is also a potential exchange format that DoE is considering.</t>
-</section>
-<section title="TrendMicro Sharing System">
-	<t>More information to come.</t>
 </section>
 
 </section>
