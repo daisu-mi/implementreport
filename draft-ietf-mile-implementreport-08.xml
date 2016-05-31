@@ -7,6 +7,8 @@
 <!ENTITY RFC6545 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.6545.xml">
 <!ENTITY RFC6546 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.6546.xml">
 <!ENTITY RFC6545 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.6545.xml">
+<!ENTITY RFC7203 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.7203.xml">
+<!ENTITY RFC4765 SYSTEM "http://xml.resource.org/public/rfc/bibxml/reference.RFC.4765.xml">
 ]>
 <?xml-stylesheet type='text/xsl' href='rfc2629.xslt' ?>
 <!-- used by XSLT processors -->
@@ -21,7 +23,7 @@
 <?rfc sortrefs="yes" ?>
 <?rfc compact="yes" ?>
 <?rfc subcompact="no" ?>
-<rfc category="info" docName="draft-ietf-mile-implementreport-07">
+<rfc category="info" docName="draft-ietf-mile-implementreport-08">
 
  <front>
 
@@ -78,14 +80,13 @@ implemented one or more of the standards published from the IETF INCident Handli
      <t>This document is a collection of implementation reports from vendors and researchers who have 
 implemented one or more of the standards published from the INCH and MILE working groups.  The standards include: 
 <list style="symbols">
-   <t>Incident Object Description Exchange Format (IODEF) v1, RFC5070, </t>
+   <t>Incident Object Description Exchange Format (IODEF) v1, RFC5070 <xref target="RFC5070"/>, </t>
    <t>Incident Object Description Exchange Format (IODEF) v2, RFC5070-bis, </t>
-   <t>Extensions to the IODEF-Document Class for Reporting Phishing, RFC5901</t>
-   <t>Sharing Transaction Fraud Data, RFC5941</t>
-   <t>IODEF-extension for Structured Cybersecurity Information, RFCXXXX</t>
-   <t>Real-time Inter-network Defense (RID), RFC6545</t>
-   <t>Transport of Real-time Inter-network Defense (RID) Messages over HTTP/TLS, RFC6546.</t>
-   <t>Incident Object Description Exchange Format (IODEF) Extension for Structured Cybersecurity Information, RFC7203</t>
+   <t>Extensions to the IODEF-Document Class for Reporting Phishing, RFC5901 <xref target="RFC5901"/>,</t>
+   <t>Sharing Transaction Fraud Data, RFC5941 <xref target="RFC5941"/>,</t>
+   <t>Real-time Inter-network Defense (RID), RFC6545 <xref target="RFC6545"/>,</t>
+   <t>Transport of Real-time Inter-network Defense (RID) Messages over HTTP/TLS, RFC6546 <xref target="RFC6546"/>,</t>
+   <t>Incident Object Description Exchange Format (IODEF) Extension for Structured Cybersecurity Information, RFC7203 <xref target="RFC7203"/>.</t>
 </list></t>
 
      <t>The implementation reports included in this document have been provided by the team or product responsible for the implementations of the mentioned RFCs.  
@@ -109,10 +110,7 @@ implemented one or more of the standards published from the INCH and MILE workin
 
      <section title="Research and Education Networking Information Sharing and Analysis Center">
       <t>Research and Education Networking Information Sharing and Analysis Center (REN-ISAC) is a private community of the research and higher education members for sharing threat information, and employs IODEF formatted-message to exchange information.</t>
-<!--
-      <t>REN-ISAC also recommends to use of the IODEF attachment provided with the notification email be processed rather than relying on parsing of the email body text. The interface provided by REN-ISAC are designed for dealing with such email.
--->>
-      <t>  REN-ISAC also recommends to use an IODEF attachment provided with
+      <t>REN-ISAC also recommends to use an IODEF attachment provided with
    a notification email for processing rather than relying on parsing of
    the email body text.  The interface provided by REN-ISAC are designed
    to handle such email.
@@ -305,7 +303,7 @@ The future version of DAEDALUS will support IODEF for sending alert messages to 
 	</section>
 
 <section title="Automated Incident Reporting - AirCERT">
-	<t>AirCERT was implemented by CERT/CC of Carnegie Mellon's Software Engineering Institute CERT division. AirCERT was designed to be an Internet-scalable distributed system for sharing security event data.  The AirCERT system was designed to be an automated collector of flow and IDS alerts.  AirCERT would collect that information into a relational database and be able to share reporting using IODEF and Intrusion Detection Message Exchange Format (IDMEF, RFC4765).  AirCERT additionally used SNML to exchange information about the network.  AirCERT was implemented in a combination of C and perl modules and included periodic graphing capabilities leveraging RRDTool.</t>
+	<t>AirCERT was implemented by CERT/CC of Carnegie Mellon's Software Engineering Institute CERT division. AirCERT was designed to be an Internet-scalable distributed system for sharing security event data.  The AirCERT system was designed to be an automated collector of flow and IDS alerts.  AirCERT would collect that information into a relational database and be able to share reporting using IODEF and Intrusion Detection Message Exchange Format <xref target="RFC4765"/>.  AirCERT additionally used SNML to exchange information about the network.  AirCERT was implemented in a combination of C and perl modules and included periodic graphing capabilities leveraging RRDTool.</t>
 	<t>AirCERT was intended for large scale distributed deployment and eventually the ability to sanitize data to be shared across administrative domains. The architecture was designed to allow collection of data at a per site basis and to allow each site to create data sharing based on its own particular trust relationships.</t>
 </section>
 <section title="US Department of Energy CyberFed">
@@ -350,16 +348,16 @@ The future version of DAEDALUS will support IODEF for sending alert messages to 
 		<list style="symbols">
 			<t>
 				IODEF-Document Class; it is the top level class in the IODEF data model
-				described in section 3.1 of <xref target="RFC5070"/>.
+				described in section 3.1 of RFC5070.
 			</t>
 			<t>
 				The vlan-name and vlan-num Attribute; according to section 3.16.2 of
-				<xref target="RFC5070"/>, they are the name and number of Virtual LAN and are the
+				RFC5070, they are the name and number of Virtual LAN and are the
 				attributes for Address class.
 			</t>
 			<t>
 				Extending the Enumerated Values of Attribute; according to section 5.1
-				of <xref target="RFC5070"/>, it is a extension techniques to add new enumerated values
+				of RFC5070, it is a extension techniques to add new enumerated values
 				to an attribute, and has a prefix of "ext-", e.g., ext-value, ext-category,
 				ext-type, and so on.
 			</t>
@@ -465,6 +463,10 @@ Network Security Research Institute</t>
      &RFC6545;
 
      &RFC6546;
+
+     &RFC7203;
+
+     &RFC4765;
 			<reference anchor="XSD:Perl" target="http://search.cpan.org/~aulusoy/XML-Pastor-1.0.4/">
 				<front>
 					<title>XML::Pastor</title>
